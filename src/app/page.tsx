@@ -1,7 +1,6 @@
 'use client';
 
-import { ThirdwebProvider, ConnectWallet, Web3Button, useContract } from "@thirdweb-dev/react";
-import { Avalanche } from "@thirdweb-dev/chains";
+import { ConnectWallet, Web3Button } from "@thirdweb-dev/react";
 import { useState } from "react";
 import Image from 'next/image';
 import { SmartContract } from "@thirdweb-dev/sdk";
@@ -9,15 +8,8 @@ import { SmartContract } from "@thirdweb-dev/sdk";
 // NFT Contract Address
 const NFT_CONTRACT_ADDRESS = "0xd9eFDD5d4693C8c6e5782b62Df251816942976d2";
 
-// Client ID
-const CLIENT_ID = "73d35ed4ef1dd510b98d83df05a64931";
-
 export default function Home() {
   return (
-    <ThirdwebProvider 
-      clientId={CLIENT_ID}
-      activeChain={Avalanche}
-    >
       <div className="container mx-auto px-4 py-12">
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">BetterCallZaal NFT Project</h1>
@@ -78,6 +70,5 @@ export default function Home() {
           <p className="mt-2">For support: support@bettercallzaal.com</p>
         </footer>
       </div>
-    </ThirdwebProvider>
   );
 }
